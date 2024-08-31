@@ -1,0 +1,40 @@
+<div class="agregar">
+  <div class="agregar_contenedor">
+    <select
+      class="agregar_tipo"
+      [(ngModel)]="selectedValue"
+      [ngClass]="{
+        'ing-color': selectedValue === 'ing',
+        'egr-color': selectedValue === 'egr'
+      }"
+    >
+      <option value="ing">+</option>
+      <option value="egr">-</option>
+    </select>
+    <input
+      type="text"
+      name="descripcion"
+      class="agregar_descripcion"
+      placeholder="Agregar Descripción"
+      [(ngModel)]="descripcionInput"
+      [ngClass]="{
+        'ing-color': selectedValue === 'ing',
+        'egr-color': selectedValue === 'egr'
+      }"
+    />
+    <input
+      type="number"
+      name="valor"
+      class="agregar_valor"
+      placeholder="Valor"
+      [(ngModel)]="valorInput"
+      [ngClass]="{
+        'ing-color': selectedValue === 'ing',
+        'egr-color': selectedValue === 'egr'
+      }"
+    />
+    <button class="agregar_btn" (click)="onAgregarValor()">
+      <i class="ion-ios-checkmark-outline"></i>
+    </button>
+  </div>
+</div>

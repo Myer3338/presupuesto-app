@@ -1,0 +1,16 @@
+<div class="egreso">
+  <h2 class="egreso_titulo">Egresos</h2>
+
+  <div class="elemento limpiarEstilos" *ngFor="let listado of listado">
+    <div class="elemento_descripcion">{{listado.descripcion}}</div>
+    <div class="right limpiarEstilos">
+      <div class="elemento_valor">-{{listado.valor | currency : 'COP' : 'symbol-narrow'}}</div>
+      <div class="elemento_porcentaje">{{listado.porcentaje | percent}}</div>
+      <div class="elemento_eliminar">
+        <button class="elemento_eliminar--btn" (click)="eliminarRegistro(listado.id)">
+          <i class="ion-ios-close-outline"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
