@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Listado } from '../listado.model';
 import { Listadoservice } from '../listado.service';
-import { IngresoComponent } from '../ingreso/ingreso.component';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
 })
+
 export class FormularioComponent implements OnInit {
   id: number;
   selectedValue: string = 'ing'; // Valor inicial
